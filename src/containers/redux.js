@@ -71,7 +71,6 @@ class GoldenWithRedux extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log(state);
   return {
     count: state.acornReducer.count,
     img: state.imgReducer.img,
