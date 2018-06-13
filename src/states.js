@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Button from './button';
-import Display from './display';
-
+import Button from './components/button';
+import Display from './components/display';
 
 export default class GoldenAcornAppWithState extends Component {
   constructor() {
@@ -41,14 +40,15 @@ export default class GoldenAcornAppWithState extends Component {
       this.setState({ count: this.state.count - 1 })
     }
   }
+
   render() {
     return (
       <h1>
-      <div>
-        <Button label="Eat one" onClick={this.minusAcorns} />
-        <Display count={this.state.count} />
-        <Button label="Buy one" onClick={this.addAcorns} />
-      </div>
+        <div>
+          <Button label="Eat one" onClick={this.minusAcorns} />
+          <Display count={this.state.count} />
+          <Button label="Buy one" onClick={this.addAcorns} />
+        </div>
       </h1>
     )
   }
